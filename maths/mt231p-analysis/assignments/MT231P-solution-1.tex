@@ -28,11 +28,178 @@
 
 \begin{homeworkProblem}
 
+    \begin{grayBoxed}
+        Prove that for any sets $A$ and $B$, the following holds
+
+        $$
+            A = (A \cap B) \cup (A \setminus B)
+        $$
+    \end{grayBoxed}
+
+    To prove this, we will show that any element $x \in A$ will also be a part of $(A \cap B) \cup (A \setminus B)$
+
+    For any element, it can either be in $B$ or not be in $B$, therefore:
+
+    \begin{align*}
+        x  & \in A                                                                       \\
+        x  & \in A \text{ and } (x \in B \text{ or } x \not \in B)                       \\
+        (x & \in A \text{ and } x \in B) \text{ or } (x \in A \text{ and } x \not \in B) \\
+        (x & \in A \cap B) \text{ or } (x \in A \setminus B)                             \\
+        x  & \in (A \cap B)\cup (A \setminus B)
+    \end{align*}
+
+    Therefore, if $x \in A$, then $x \in (A \cap B)\cup (A \setminus B)$.
+    This shows that $A \subseteq (A \cap B)\cup (A \setminus B)$ as every element in $A$ has to be in $(A \cap B)\cup (A \setminus B)$.
+
+    Now we need to show that every element $x \in (A \cap B)\cup (A \setminus B)$ also has to be in $A$.
+
+    \begin{align*}
+        x  & \in (A \cap B)\cup (A \setminus B)                                          \\
+        x  & \in (A \cap B) \text{ or } x   \in (A \setminus B)                          \\
+        (x & \in A \text{ and } x \in B) \text{ or } (x \in A \text{ and } x \not \in B) \\
+        x  & \in A \text{ and } (x \in B \text{ or } x \not \in B)                       \\
+    \end{align*}
+
+    Therefore, if $x \in (A \cap B)\cup (A \setminus B)$, then $x \in A \text{ and } (x \in B \text{ or } x \not \in B)$,
+    which shows that regardless of wether x is or isn't in $B$, x will be in $A$. This means that every element in
+    $(A \cap B)\cup (A \setminus B)$ is in $A$. Therefore, $(A \cap B)\cup (A \setminus B) \subseteq A$.
+
+    Because $(A \cap B)\cup (A \setminus B)$ is a subset of $A$, and $A$ is a subset of $(A \cap B)\cup (A \setminus B)$, that means that
+    every element in one set must be in the other, they are therefore the same.
+
 \end{homeworkProblem}
 
 \pagebreak
 
 \begin{homeworkProblem}
+    \begin{grayBoxed}
+        Let $a, b \in \R$, where $a < b$, find a bijection from $(a, b)$ to $(0, 1)$.
+    \end{grayBoxed}
+
+    Fist, find a bijection from $(a, b)$ to $(0, n)$ for some $n \in \R$.
+
+    \begin{align*}
+        g & : (a, b) \rightarrow (0, n)         \\
+        g & : (a, b) \rightarrow (a - a, b - a) \\
+        g & (x)      = x - a                    \\
+    \end{align*}
+
+    $g$ is clearly a bijection as it is a linear function. Now, find a bijection from $(0, n)$ to $(0, 1)$.
+
+    \begin{align*}
+        p: (0, b - a) & \rightarrow (0, 1) \\
+        p (0)         & = 0                \\
+        p (b - a)     & = 1                \\
+        p (x)         & = \frac{x}{b - a}  \\
+    \end{align*}
+
+    If we combine the two functions above, we get:
+
+    \begin{align*}
+        f(x) & = p \circ g                           \\
+             & = p(g(x))                             \\
+             & = \frac{x - a}{b - a}                 \\
+             & = \frac{1}{b - a} x - \frac{a}{b - a} \\
+    \end{align*}
+
+    Because $\frac{1}{b - a}$ is a constant, the function $f(x)$ is linear, and therefore a bijection.
+
+\end{homeworkProblem}
+
+\pagebreak
+
+\begin{homeworkProblem}
+    \begin{grayBoxed}
+        Prove that a function $f: A \rightarrow B$ which possesses an inverse must be a bijection.
+    \end{grayBoxed}
+\end{homeworkProblem}
+
+\pagebreak
+
+\begin{homeworkProblem}
+    \subsection*{Part a}
+
+    \begin{grayBoxed}
+        Consider the function $f: A \rightarrow B$. Show that setting $a_1 \sim a_2$ if $f(a_1) = f(a_2)$ defines an equivalence relation on A.
+    \end{grayBoxed}
+
+
+    \subsection*{Part b}
+
+    \begin{grayBoxed}
+        Identify the equivalence classes under this equivalence relation if $f: \R \rightarrow \R$ is given by $f(x) = x^2$
+    \end{grayBoxed}
+
+    \begin{align*}
+        f(a)  & = f(b) \\
+        a^2   & = b^2  \\
+        \pm a & = b    \\
+    \end{align*}
+
+    Therefore the equivalence class of any x is:
+
+    $$[x] = \mset{x, -x}$$
+
+    \subsection*{Part c}
+
+    \begin{grayBoxed}
+        Identify the equivalence classes under this equivalence relation if $f: \R \rightarrow \R$ is given by $f(x) = \lfloor x \rfloor$
+    \end{grayBoxed}
+
+    There are an infinite amount of equivalence classes, all in the form $[n, n + 1)$ for some integer $n$
+
+    $$[x] = [\lfloor x\rfloor, \lfloor x\rfloor + 1)$$
+
+\end{homeworkProblem}
+
+\pagebreak
+
+\begin{homeworkProblem}
+    Let $C$ be the set of counties in Ireland.
+
+    \subsection*{Part a}
+
+    \begin{grayBoxed}
+        Give an example of an equivalence relation on $C$. What are the equivalence classes of this relation?
+    \end{grayBoxed}
+
+    An example of an equivalence relation on $C$ would be $a \sim b$ if the first letter of $a$ is the same as the first letter of $b$.
+
+    This is an equivalence relation as it fulfils all 3 rules:
+    \begin{enumerate}
+        \item $a \sim a$ since a will always have the same name as a, a will always have the same first letter as a.
+        \item if $a \sim b$, then $b \sim a$ since if a and b have the same first letter, then b and a will also have the same  first letter.
+        \item if $a \sim b$, and $b \sim c$, then $a \sim c$. If a and b have the same first letter, and b and c have the same first letter, then c and a must have the same first letter, and therefore, $a \sim c$.
+    \end{enumerate}
+
+
+    \subsection*{Part b}
+
+    \begin{grayBoxed}
+        Give another example of an equivalence relation on $C$.
+    \end{grayBoxed}
+
+    Another example of an equivalence relation on $C$ would be $a \sim b$ if a and b have the same number of houses\dots
+
+    This is an equivalence relation as it fulfils all 3 rules:
+    \begin{enumerate}
+        \item $a \sim a$ since a will always have the same houses as a.
+        \item if $a \sim b$, then $b \sim a$ since if a and b have the same number of houses, then b and a will also have the same number of houses.
+        \item if $a \sim b$, and $b \sim c$, then $a \sim c$. If a and b have the same number of houses, and b and c have the same number of houses, then c and a must have the same number of houses, and therefore, $a \sim c$.
+    \end{enumerate}
+
+    \subsection*{Part c}
+
+    \begin{grayBoxed}
+        Give an example of a relation on $C$ which is not an equivalence relation.
+    \end{grayBoxed}
+
+    An example of a relation on $C$ which it not an equivalence relation would be $a \sim b$ if $a$ and $b$ border each other.
+
+    This is not an equivalence relation as Waterford and Cork border each other, therefore Waterford $\sim$ Cork.
+    Cork also borders Kerry therefore Cork $\sim$ Kerry. However Waterford $\not \sim$ Kerry.
+
+    This breaks the transitive property of equivalence relations.
 
 \end{homeworkProblem}
 
