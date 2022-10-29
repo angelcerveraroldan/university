@@ -1,9 +1,6 @@
 \documentclass[12pt]{article} % use the article class
 
-\input{../../../preamble/homework/packages.tex} % imports the packages.tex file from the preamble directory
-\input{../../../preamble/homework/environments.tex} % imports the environments.tex file from the preamble directory
-\input{../../../preamble/macros.tex} % imports the macros.tex file from the preamble directory
-\input{../../../preamble/homework/settings.tex} % imports the settings.tex file from the preamble directory
+\input{../../../preamble/homework/hw-inputs.tex} 
 
 \title{
     \vspace{2in}
@@ -81,10 +78,11 @@
     \begin{align*}
         g & : (a, b) \rightarrow (0, n)         \\
         g & : (a, b) \rightarrow (a - a, b - a) \\
+        g & : (a, b) \rightarrow (0, b - a)     \\
         g & (x)      = x - a                    \\
     \end{align*}
 
-    $g$ is clearly a bijection as it is a linear function. Now, find a bijection from $(0, n)$ to $(0, 1)$.
+    $g$ is clearly a bijection as it is a linear function. Now, find a bijection from $(0, b - a)$ to $(0, 1)$.
 
     \begin{align*}
         p: (0, b - a) & \rightarrow (0, 1) \\
@@ -102,6 +100,10 @@
              & = \frac{1}{b - a} x - \frac{a}{b - a} \\
     \end{align*}
 
+    $f$ will have the domain of $g$.
+
+    The range of g is the domain of $p$, therefore $f$ will have the range of $p$. This means that $f: (a, b) \rightarrow (0, 1)$
+
     Because $\frac{1}{b - a}$ is a constant, the function $f(x)$ is linear, and therefore a bijection.
 
 \end{homeworkProblem}
@@ -112,6 +114,38 @@
     \begin{grayBoxed}
         Prove that a function $f: A \rightarrow B$ which possesses an inverse must be a bijection.
     \end{grayBoxed}
+
+    For a function to be a bijection, it must be one-to-one, and onto. We will prove that if f has an inverse, then it must be both one-to-one and onto by contradiction.
+
+    \subsection*{$f$ must be one-to-one}
+
+    We know that $f$ has an inverse, assuming that $f$ isn't one-to-one, then $\exists a_1, a_2 \in A$ where $a_1 \not = a_2$ and $b \in B$ such that:
+    $$
+        f(a_1) = f(a_2) = b
+    $$
+
+    This would mean that:
+
+    $$
+        f^{-1}(b) = a_1 \text{ and } f^{-1}(b) = a_2
+    $$
+
+    But a function cannot return two different values when given one input.
+
+    This means that if $f$ isn't one to one, it cannot have an inverse. This is a contradiction, as we know that $f$ does have an inverse, meaning that $f$ has to be one to one.
+
+    \subsection*{$f$ must be a onto}
+
+    We know that $f$ has an inverse, assuming that $f$ isn't onto, then $\exists b \in B$ such that $f(a) \not = b$ for any $a \in A$.
+
+    If $f$ had an inverse $f^{-1}(b)$ would be undefined, meaning that $f^{-1}: B \rightarrow A$ wouldn't exist. Therefore,
+    for $f$ to have an inverse, it must be onto.
+
+    \vspace*{10mm}
+
+    Because we know that $f$ must be one-to-one, and $f$ must be onto, $f$ must be a bijection if it has an inverse.
+
+
 \end{homeworkProblem}
 
 \pagebreak
@@ -123,6 +157,11 @@
         Consider the function $f: A \rightarrow B$. Show that setting $a_1 \sim a_2$ if $f(a_1) = f(a_2)$ defines an equivalence relation on A.
     \end{grayBoxed}
 
+    \begin{enumerate}
+        \item $a \sim a$ since $f(a) = f(a)$
+        \item if $a \sim b$, then $b \sim a$ since $f(a) = f(b)$, then $f(b) = f(a)$
+        \item if $a \sim b$ and $b \sim c$, then $a \sim c$ since if $f(a) = f(b)$ and $f(b) = f(c)$, then $f(a) = f(c)$
+    \end{enumerate}
 
     \subsection*{Part b}
 
@@ -172,6 +211,7 @@
         \item if $a \sim b$, and $b \sim c$, then $a \sim c$. If a and b have the same first letter, and b and c have the same first letter, then c and a must have the same first letter, and therefore, $a \sim c$.
     \end{enumerate}
 
+    The equivalence relation classes would be all counties starting with a, all counties starting with b, all counties starting with c...
 
     \subsection*{Part b}
 
@@ -179,7 +219,7 @@
         Give another example of an equivalence relation on $C$.
     \end{grayBoxed}
 
-    Another example of an equivalence relation on $C$ would be $a \sim b$ if a and b have the same number of houses\dots
+    Another example of an equivalence relation on $C$ would be $a \sim b$ if a and b have the same number of houses.
 
     This is an equivalence relation as it fulfils all 3 rules:
     \begin{enumerate}

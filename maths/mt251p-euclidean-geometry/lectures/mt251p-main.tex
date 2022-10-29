@@ -1,0 +1,100 @@
+\documentclass[12pt]{article} % use the article class
+
+\input{../../../preamble/homework/hw-inputs.tex} 
+
+\title{
+    \vspace{2in}
+        \textmd{\textbf{MT251 - Euclidean Geometry}}\\
+    \vspace{1in}
+    \textmd{\textbf{Lecture Notes}}\\
+    \vspace{1in}
+}
+
+\author{
+    \hmwkAuthorName\\
+    \hmwkStudentnum
+}
+
+\date{24th October 2022}
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+Remakrk 6. Suppose we are in three dimensional space given by $\R^3 = \mset{(x, y, x) \ | \ x, y, z \in \R}$
+
+and suppose that $A, B \in \R^3$
+
+The vector $\vec{u}$ = $\vec{AB}$ can be written as: GIVE A AND B (X, Y, Z) VALUES AND ADD ALGEBRAICALLY
+
+\subsection*{Theorem 2}
+\begin{grayBoxed}
+    Suppose $\vec{v} = v_1 i + v_2 j + v_3 k$ and $\vec{w} = w_1 i + w_2 j + w_3 k$ and $t \in \R$.
+    \begin{enumerate}
+        \item $\vec{v} + \vec{w} = (v_1 + w_1) i + (v_2 + w_2) j + (v_3 + w_3) k$
+        \item $t \vec{v} = (t v_1 i) +(t v_2 j) + (t v_3) k$
+        \item $||\vec{v}|| = \sqrt{v_1^2 + v_2^2 + v_3^2}$
+        \item $\vec{v} \cdot \vec{w} = v_1w_1 + v_2 w_2 + v_3 w_3$
+        \item $\vec{v} \cdot \vec{w} = ||\vec{v}|| ||\vec{w}|| \cos{\theta}$, $v, w \not = 0$, where $0 \leq \theta \leq \pi$
+    \end{enumerate}
+\end{grayBoxed}
+
+\subsection{Definition 2}
+Two non 0 vector are said to be perpendicular if the angle between them is $\frac{\pi}{2}$.
+
+The 0 vector is perpendicular to every vector.
+
+
+\subsection{Definition 3}
+Suppose $\vec{u} = u_1i + u_2j + u_3k$ and $\vec{w} = w_1i + w_2j + w_3k$, the cross product of $\vec{u}$ and $\vec{w}$ is denoted by
+$\vec{u} \cross \vec{w}$ and is defined by:
+
+$$
+    \vec{u} \cross \vec{w} = (u_2 w_3 - u_3 w_2)i + (u_3 w_1 - u_1 w_3)j + (u_1 w_2 - u_2 w_1)k
+$$
+
+\subsection{Remark 8}
+If $\vec{u}$ and $\vec{w}$ are vectors in $\R^3$, then $u \cross w$ gives a vector which is perpendicular to both $\vec{u}$ and $\vec{w}$.
+
+\pagebreak
+
+\subsection{Example 6}
+
+\begin{grayBoxed}
+    Consider the vectors $\vec{u} = i + 2j + k$ and $\vec{w} = 3i + j + 2k$. Find the angle $\theta$ between $\vec{u}$ and $\vec{w}$.
+\end{grayBoxed}
+
+\begin{align*}
+    \vec{u} \cdot \vec{w} & = 7                               \\
+    ||\vec{u}||           & = \sqrt{6}                        \\
+    ||\vec{w}||           & = \sqrt{14}                       \\
+    7                     & = \sqrt{6} \sqrt{14} \cos{\theta} \\
+    \cos{\theta}          & = \frac{7}{\sqrt{84}}             \\
+    \theta                & = \arccos{\frac{7}{\sqrt{84}}}
+\end{align*}
+
+\section{Vectors in $\R^n$}
+
+\subsection{Definition 4}
+For $n \geq 1$ we define
+
+$$
+    \R^n = \mset{(x_1, x_2, ...) \ | \ x_i \in \R \text{ for } 1 \leq i \leq n}
+$$
+
+
+\subsection*{Theorem 3}
+\begin{grayBoxed}
+    Suppose $(x_1, x_2, ..., x_n)$ and $(y_1, y_2, ..., y_n) \in \R^n$.
+    \begin{enumerate}
+        \item $(x_1, x_2, ..., x_n) + (y_1, y_2, ..., y_n) = (x_1 + y_1, x_2 + y_2, ..., x_n + y_n)$
+        \item $t (x_1, x_2, ..., x_n) = (tx_1, tx_2, ..., tx_n)$
+        \item $||(x_1, x_2, ..., x_n)|| = \sqrt{x_{1}^2 + x_{2}^2 + ... + x_{n}^2}$
+        \item $\vec{x} \cdot \vec{y} = (x_1  y_1, x_2  y_2, ..., x_n y_n)$
+        \item $\vec{v} \cdot \vec{w} = ||\vec{v}|| ||\vec{w}|| \cos{\theta}$, $v, w \not = (0, 0, ..., 0)$, where $0 \leq \theta \leq \pi$
+    \end{enumerate}
+\end{grayBoxed}
+
+\end{document}

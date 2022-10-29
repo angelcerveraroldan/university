@@ -7,6 +7,12 @@
     skipbelow=\topsep,
 ]{grayBoxed}
 
+\newmdenv[
+    backgroundcolor=blue!20,
+    skipabove=\topsep,
+    skipbelow=\topsep,
+]{blueBoxed}
+
 % General writing
 \newcommand{\bracket}[1]{\left(#1\right)} % for automatic resizing of brackets
 \newcommand{\sbracket}[1]{\left[#1\right]} % for automatic resizing of square brackets
@@ -25,3 +31,25 @@
 \newcommand{\R}{\mathbb{R}} % real numbers
 \newcommand{\C}{\mathbb{C}} % complex numbers
 \newcommand{\E}{\mathbb{E}} % expectation operators
+
+% Aesthetic
+\newcommand{\thmBox}[2]{
+    \begin{tcolorbox}[colback=blue!5!white,colframe=blue!50!black,
+            colbacktitle=blue!90!black,title=Theorem #1]
+        #2
+    \end{tcolorbox}
+}
+
+\newcommand{\lmBox}[2]{
+    \begin{tcolorbox}[colback=blue!5!white,colframe=blue!50!black,
+            colbacktitle=blue!50!black,title=Lemma #1]
+        #2
+    \end{tcolorbox}
+}
+
+\newcommand{\defBox}[2]{
+    \begin{tcolorbox}[colback=red!5!white,colframe=red!50!black,
+            colbacktitle=red!60!black,title=Definition #1]
+        #2
+    \end{tcolorbox}
+}
