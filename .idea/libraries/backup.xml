@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="backup">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/maths/backup/MT251P.zip!/" />
+      <root url="jar://$PROJECT_DIR$/maths/backup/MT241P.zip!/" />
+      <root url="jar://$PROJECT_DIR$/maths/backup/MT232P.zip!/" />
+      <root url="jar://$PROJECT_DIR$/maths/backup/MT234P.zip!/" />
+      <root url="jar://$PROJECT_DIR$/maths/backup/MT242P.zip!/" />
+      <root url="jar://$PROJECT_DIR$/maths/backup/MT231P.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
