@@ -7,12 +7,6 @@
     skipbelow=\topsep,
 ]{grayBoxed}
 
-\newmdenv[
-    backgroundcolor=blue!20,
-    skipabove=\topsep,
-    skipbelow=\topsep,
-]{blueBoxed}
-
 % General writing
 \newcommand{\bracket}[1]{\left(#1\right)} % for automatic resizing of brackets
 \newcommand{\sbracket}[1]{\left[#1\right]} % for automatic resizing of square brackets
@@ -51,5 +45,12 @@
     \begin{tcolorbox}[colback=red!5!white,colframe=red!50!black,
             colbacktitle=red!60!black,title=Definition #1]
         #2
+    \end{tcolorbox}
+}
+
+% Homework Specific
+\newcommand{\hBox}[1]{
+    \begin{tcolorbox}[colback=blue!5!white,colframe=blue!50!black]
+        #1
     \end{tcolorbox}
 }
