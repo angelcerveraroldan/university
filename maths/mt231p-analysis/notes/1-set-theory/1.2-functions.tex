@@ -1,0 +1,71 @@
+\subsection{Functions}
+
+\defBox{Function}{
+    Let $A$ and $B$ bet two sets, then a function $f: A \rightarrow B$ is a 
+    set of ordered pairs in $A \times B$ with the property that if $(a, b)$ and $(a, b')$ 
+    are elements of $f$, then $b = b'$
+}
+
+With the above definition, the domain of $f$ is the set of all possible values for $a$. 
+We can also set restrictions on functions. Take $C \subset A$, then we can restrict $f$ to $C$:
+
+$$
+    f|_C: C \rightarrow B \quad f|_C(x) = f(a) \quad \forall a \in C
+$$
+
+Some functions have no formula, some do. Some functions can even have multiple branches, for example, take:
+
+\begin{equation*}
+    f =
+     \begin{cases}
+     x+1 & \text{for } x \leq 0 \\
+     x-1 & \text{for } x > 0
+     \end{cases}
+\end{equation*}
+
+Fuctions can also be composed, take $f: A \rightarrow B$, and $g: C \rightarrow D$, then the composition of $f$ and $g$ is 
+written as $(g \circ f) (x) = g(f(x))$ for all x where $f(x) \in C$.
+
+\defBox{Injections / One-to-One}{
+    A function $f: A \rightarrow B$ is one to one if for any pair $a, b \in A$ 
+    $f(a) = f(b)$ only if $a = b$. 
+
+    In other words, there are no two \textbf{different} inputs that will yield the same output
+}
+
+\defBox{Surjections / Onto}{
+    A function $f: A \rightarrow B$ is onto if $\forall b \in B$, $\exists a \in A$ such that $f(a) = b$
+}
+
+\defBox{Bijections}{
+    A function that is both injective and surjective
+}
+
+\thmBox{}{
+    Let $f: A \rightarrow B$ be a bijection. Then its inverse, $g = f^{-1}$ exists. 
+}
+
+We must define $g: B \rightarrow A$ such that $(g \circ f) (a) = a \quad \forall a \in A$, furthermore,  
+$(f \circ g) (b) = b \quad \forall b \in B$
+
+Let $b \in B$, because $f$ is onto, then $\exists a \in A$ such that $f(a) = b$. Also, $f$ is one to one, so 
+$a$ is a unique elment. We define $g(b) = a$. 
+
+Then $g(f(a)) = g(b) = a$ for all $a \in A$. And $f(g(b)) = f(a) = b$ for all $b \in B$. Therefore $g = f^{-1}$
+
+
+\thmBox{}{
+    Let $f: A \rightarrow B$ be a bijection, and $g: B \rightarrow C$ be a bijection. Then $g \circ f: A \rightarrow C$ is a 
+    bijection. 
+}
+
+To show that $g \circ f$ is a bijection, we need to show that it is one to one, and that it is onto. 
+
+Take $a_1, a_2 \in A$, if $g(f(a_1)) = g(f(a_1))$, then because $g$ is one to one, $f(a_1) = f(a_2)$, because $f$ is also one to one, 
+then $a_1 = a_2$, therefore $g \circ f$ is one to one. 
+
+Take $c \in C$, because $g$ is onto, then $\exists b \in B$ such that $g(b) = c$, and because $f$ is also onto, then 
+$\exists a \in A$ such that $f(a) = b$, therefore, $g \circ f$ is onto. 
+
+Because we have shown that $g \circ f$ is onto and one to one, we have proven that $g \circ f$ is a bijection. 
+\pagebreak
